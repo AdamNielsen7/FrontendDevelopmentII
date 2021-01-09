@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Code</title>
+    <script>
+
+    </script>
+</head>
+<header>Code</header>
+<body>
+    <ol>
+        <li> <pre>
+            function makeList(contents) {
+                contentsList = document.getElementById("contentsList");
+                // remove each element in list, just in case I do something stupid
+                while(contentsList.firstChild) contentsList.removeChild(contentsList.firstChild);
+                // add each element in contents to list
+                for (i=0; i < contents.length; i++) {
+                    listItem = document.createElement('li');
+                    listItem.innerHTML = <a href='" + contents[i]["url"] + "'>" + contents[i]["label"] + "</a>";
+                    contentsList.appendChild(listItem);
+                }
+            }
+        </pre></li>
+        <li><pre>
+            localStorage.setItem(key, value)
+            var variable = localStorage.getItem(key)
+        </pre></li>
+    </ol>
+</body>
+</html>
