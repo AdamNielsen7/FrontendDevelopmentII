@@ -1,7 +1,7 @@
 const contents = [
     {
         label: "Week1 notes",
-        url: "Week1/index.html"
+        url: "week1/index.html"
     }
 ]
 
