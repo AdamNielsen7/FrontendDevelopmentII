@@ -8,7 +8,7 @@ const contents = [
         url: "week2/"
     },
     {
-        labe: "CV website",
+        label: "CV website",
         url: "https://adamnielsen.dev/"
     }
 ]
