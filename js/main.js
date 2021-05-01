@@ -6,6 +6,10 @@ const contents = [
     {
         label: "Week2 notes",
         url: "week2/"
+    },
+    {
+        labe: "CV website",
+        url: "https://adamnielsen.dev/"
     }
 ]
 
