@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Code</title>
+    <script>
+
+    </script>
+</head>
+<header>Code</header>
+<body>
+    <ol>
+        <li>Object Methods<pre>
+            let user = {
+                name: "John",
+                age: 30
+              };
+              
+              user.sayHi = function() {
+                alert("Hello!");
+              };
+              
+              user.sayHi(); // Hello!
+              </pre></li>
+        <li>Accessing properties<pre>
+            superman.name
+            superman['name']
+        </pre></li>
+        <li>Symbol can be used as token<pre>
+            const name = Symbol('name');
+            const supergirl = { [name]: 'Supergirl' };
+        </pre></li>
+        <li>Check if object has property<pre>
+            'city' in superman;
+            << false
+            //or to make sure not inherited
+            superman.hasOwnProperty('city');
+            << false
+        </pre></li>
+        <li>find all properties of object<pre>
+            for(const key in superman) {
+                console.log(key + ": " + superman[key]);
+            }
+        </pre></li>
+        <li>remove property<pre>
+            delete superman.fly
+        </pre></li>
+        <li>Gettid DOM elements<pre>
+            const h1 = document.getElementById('title');
+            const listItems = document.getElementsByTagName('li');
+            const heroes = document.getElementsByClassName('hero');
+            document.querySelector('#bats');
+        </pre></li>
+        <li>Adding a class to an element<pre>
+            wonderWoman.classList.add('warrior');
+        </pre></li>
+        <li>creating an element<pre>
+            function createElement (tag,text) {
+                const el = document.createElement(tag);
+                el.textContent = text;
+                return el
+            }
+        </pre></li>
+        <li>Add to list <pre>
+            heroes.appendChild(flash);
+            heroes.insertBefore(aquaman,wonderWoman);
+        </pre></li>
+        <li>Update CSS<pre>
+            superman.style.border = "red 2px solid";
+            //better practice is to change class of object
+        </pre></li>
+        <li>Add Event Listener to element<pre>
+            document.body.addEventListener('click',doSomething);
+        </pre></li>
+    </ol>
+</body>
+</html>
