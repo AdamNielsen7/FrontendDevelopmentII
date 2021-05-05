@@ -97,7 +97,7 @@
       // 5. Sort the inventors by years lived
       const array5 = inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year))
       console.log(array5);
-      
+
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
       // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
@@ -125,6 +125,17 @@
         'car',
         'truck'
       ];
+
+      let array8 = data.reduce(function (all, x) {
+        if (x in all) {
+          all[x]++
+        }
+        else {
+          all[x] = 1
+        }
+        return all
+      }, {})
+      console.table(array8)
     </script>
   </body>
 </html>
