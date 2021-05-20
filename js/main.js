@@ -8,12 +8,16 @@ const contents = [
         url: "week2/"
     },
     {
-        label: "CV website",
-        url: "https://adamnielsen.dev/"
-    },
-    {
         label: "Week3 notes",
         url: "week3/"
+    },
+    {
+        label: "Week4 notes",
+        url: "week4/"
+    },
+    {
+        label: "Week5 notes",
+        url: "week5/"
     }
 ]
 

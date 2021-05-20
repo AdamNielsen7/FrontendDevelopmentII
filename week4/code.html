@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Code</title>
+    <script>
+
+    </script>
+</head>
+<header>Code</header>
+<body>
+    <>
+        <li> <pre>
+            const form = document.forms['search']; //find DOM for form
+const [input,button] = form.elements; //find elements of form
+
+input.addEventListener('focus', () => alert('focused'), false); //alert when element is focused
+form.addEventListener ('submit', search, false); //search when form is submitted
+
+function search(event) {
+    alert(`You Searched for: ${input.value}`); //access value of form
+    event.preventDefault(); //prevent default submission (useful when testing w/o backend)
+}
+
+input.value = 'Search Here'; //change default input value
+
+input.addEventListener('focus', function(){ //when input is focused delete default value
+    if (input.value==='Search Here') {
+        input.value = '';
+    }
+}, false);
+
+input.addEventListener('blur', function(){ //when input is empty delete default value
+    if(input.value === '') {
+        input.value = 'Search Here';
+    } }, false);
+
+form.addEventListener('keyup', disableSubmit, false); //every keypress run disableSubmit
+
+function disableSubmit(event) { //disable submit if fields are empty
+    if(event.target.value === ''){
+        document.getElementById('submit').disabled = true;
+    } else {
+        document.getElementById('submit').disabled = false;
+    }
+}
+        </pre></li>
+        <li><pre>
+            //creating a dice object
+            const dice = {
+                sides: 6,
+                roll() {
+                    return Math.floor(this.sides * Math.random() + 1)
+                }
+            }
+            //using a constructor to make a dice object
+            const Dice = function(sides=6){
+                this.sides = sides;
+                this.roll = function() {
+                    return Math.floor(this.sides * Math.random() + 1)
+                }
+            }
+            const redDice = new Dice(); //new creates instance of object using its constructor
+
+            //using a class (mostly just a fancy way to do it, but has a couple of advantages: easier to read, throws errors without "new")
+            class Dice {
+                constructor(sides=6) {
+                    this.sides = sides;
+                }
+                roll() {
+                    return Math.floor(this.sides * Math.random() + 1)
+                }
+            }
+            const blueDice = new Dice(20);
+        </pre></li>
+        <li><pre>
+            //extending a class
+            class Turtle {
+                constructor(name) {
+                    this.name = name;
+                    }
+                sayHi() {
+                    return `Hi dude, my name is ${this.name}`;
+                }
+                swim() {
+                    return `${this.name} paddles in the water`;
+                }
+            }
+            class NinjaTurtle extends Turtle {
+                constructor(name) {
+                    super(name); //calls parent class constructor
+                    this.weapon = 'hands';
+                }
+                attack() { return `Feel the power of my ${this.weapon}!` } 
+            }
+        </pre></li>
+        <li><pre>
+            //property descriptors
+            const me = { name: 'DAZ' };
+            Object.getOwnPropertyDescriptor(me,'name'); //view descriptors
+            Object.defineProperty(me, 'eyeColor', { value: 'blue', writable: false, enumerable: true }); //non-writable property
+        </pre></li>
+        <li>getters and setters<pre>
+            Object.defineProperty(me, 'yearsToRetirement',{ //when me.yearsToRetirement is called get is run
+                get() {
+                    if(this.age > this.retirementAge) { return 0; }
+                    else { return this.retirementAge - this.age; }
+                },
+                set(value) {
+                    this.age = this.retirementAge - value;
+                    return value;
+                }
+            });
+        </pre></li>
+        <li>that = this ?? <pre>
+            superman.findFriends = function(){
+                const that = this;
+                this.friends.forEach(function(friend) {
+                    console.log(`${friend.name} is friends with ${that.name}`);
+                }
+                );
+            }
+        </pre></li>
+    </ol>
+</body>
+</html>
