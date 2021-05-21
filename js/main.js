@@ -29,7 +29,7 @@ function makeList(contents) {
     // add each element in contents to list
     for (i=0; i < contents.length; i++) {
         listItem = document.createElement('li');
-        listItem.innerHTML = "<a href='" + contents[i]["url"] + "'>" + contents[i]["label"] + "</a>";
+        listItem.innerHTML = "<a href='" + contents[i]["url"] + "'><span>" + contents[i]["label"] + "</span></a>";
         contentsList.appendChild(listItem);
     }
 }

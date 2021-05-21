@@ -1,0 +1,28 @@
+{
+  "name": "FrontendDevelopmentII",
+  "version": "1.0.0",
+  "description": "A portfolio of my work from WDD330",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamNielsen7/FrontendDevelopmentII.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamNielsen7/FrontendDevelopmentII/issues"
+  },
+  "homepage": "https://github.com/AdamNielsen7/FrontendDevelopmentII#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "live-server": "^1.2.1",
+    "liveserver": "^0.1.20"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.1.2"
+  }
+}
