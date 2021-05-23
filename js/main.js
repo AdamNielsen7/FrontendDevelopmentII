@@ -1,22 +1,22 @@
 const contents = [
     {
-        label: "Week1 notes",
+        label: "Week 1 - Basics & LocalStorage",
         url: "week1/"
     },
     {
-        label: "Week2 notes",
+        label: "Week 2 - Types & Functions",
         url: "week2/"
     },
     {
-        label: "Week3 notes",
+        label: "Week 3 - Objects & Events",
         url: "week3/"
     },
     {
-        label: "Week4 notes",
+        label: "Week 4 - OOP, Forms, & Modular JavaScript",
         url: "week4/"
     },
     {
-        label: "Week5 notes",
+        label: "Week 5 - Testing & Debugging",
         url: "week5/"
     }
 ]
@@ -29,7 +29,7 @@ function makeList(contents) {
     // add each element in contents to list
     for (i=0; i < contents.length; i++) {
         listItem = document.createElement('li');
-        listItem.innerHTML = "<a href='" + contents[i]["url"] + "'><span>" + contents[i]["label"] + "</span></a>";
+        listItem.innerHTML = "<a href='" + contents[i]["url"] + "'><span class='hover:underline'>" + contents[i]["label"] + "</span></a>";
         contentsList.appendChild(listItem);
     }
 }
