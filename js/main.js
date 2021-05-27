@@ -21,7 +21,7 @@ const contents = [
     },
     {
         label: "Week 6 - Midterm TODO Application",
-        url: "todolist/"
+        url: "week6/"
     }
 ]
 

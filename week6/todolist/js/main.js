@@ -3,7 +3,6 @@ import ToDoItem from "./todoitem.js";
 
 const toDoList = new ToDoList();
 
-// Launch
 document.addEventListener("readystatechange", (event) => {
     if (event.target.readyState === "complete") {
         initApp();
@@ -16,7 +15,6 @@ const initApp = () => {
         event.preventDefault();
         processSubmission();
     });
-
     const clearItems = document.getElementById("clearItems");
     clearItems.addEventListener("click", (event) => {
         const list = toDoList.getList();
