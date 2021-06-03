@@ -22,6 +22,10 @@ const contents = [
     {
         label: "Week 6 - Midterm TODO Application",
         url: "week6/"
+    },
+    {
+        label: "Week 7 - Further Functions & AJAX",
+        url: "week7/"
     }
 ]
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Notes</title>
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Week 7 Notes</h1>
+    <ul>
+        <li> Functions have properties and Methods (fun.length returns the number of paramaters)</li>
+        <li> fun.call(obj, param) sets the value of this in the function to be the object <ul>
+            <li>passing in null as the first paramater runs the function as normal</li>
+            <li>fun.apply(obj,[params]) works the same but parameters must be in array</li></ul></li>
+        <li>add properties to functions such as fun.description</li>
+        <li>memoization <pre>
+            function square(x){
+                square.cache = square.cache || {};
+                if (!square.cache[x]) {
+                    square.cache[x] = x*x;
+                }
+                return square.cache[x]
+            }
+            square(3);
+            9
+            square(-11);
+            121
+            square.cache;
+            {"3": 9, "-11": 121}
+        </pre></li>
+        <li>functions can rewrite themselves! <pre>
+            function party(){
+                console.log('Wow this is amazing!');
+                party = function(){
+                    console.log('Been there, got the T-Shirt');
+                }
+            }
+        </pre></li>
+        <li>fancy promise resolution<pre>promise.then( result => console.log(`I rolled a ${result}`) )
+            .catch( result => console.log(`Drat! ... I rolled a ${result}`) );</pre></li>
+        <li>This is a fancy way to create functions using returned functions <pre>
+            function greeter(greeting = 'Hello') {
+                return function() {
+                    console.log(greeting);
+                }
+            }
+            const englishGreeter = greeter();
+            englishGreeter();
+            Hello
+            const frenchGreeter = greeter('Bonjour');
+            frenchGreeter();
+            Bonjour
+            const germanGreeter = greeter('Guten Tag');
+            germanGreeter();
+            Guten Tag
+        </pre></li>
+        <li><pre>
+            const url = 'https:example.com/data';
+            const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+            const request = (url,{
+            headers: headers
+            })
+            fetch(request)
+            .then( function(response) {
+                if(response.ok) {
+                    return response;
+                }
+                throw Error(response.statusText);
+            })
+            .then( response => // do something with response )
+            .catch( error => console.log('There was an error!') )
+        </pre></li>
+        <li>jQuery makes AJAX easy <pre>
+            $.ajax('http://numbersapi.com/random')
+            .done(text => outputDiv.innerHTML = text );
+        </pre></li>
+    </ul>
+</body>
