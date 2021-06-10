@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+    <script src="js/main.js"></script>
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+</head>
+<header>Notes</header>
+<body>
+    <ol>
+        <li>Testing and Debugging</li>
+        <li>Add <pre>'use strict';</pre> to the beginning of a JavaScript file for mor warnings and exceptions</li>
+        <li><pre>window.navigator.userAgent</pre> to identify user's browser</li>
+        <li><pre>alert()</pre> is also useful for debugging because it stops program until ok is clicked</li>
+        <li><a href="https://developer.chrome.com/docs/devtools/"">Chrome Debug Tools</a></li>
+        <li><pre>debugger;</pre> break points for browser debugger</li>
+        <li>Throw errors <pre>throw new Error('Something has gone badly wrong!');</pre></li>
+        <li>Try Catch Finally<ol><li><pre>function imaginarySquareRoot(number) {
+            'use strict';
+            let answer;
+            try {
+                answer = String(squareRoot(number));
+            } catch(error) {
+                answer = squareRoot(-number)+"i";
+            } finally {
+                return `+ or - ${answer}`;
+            }
+        }</pre></li></ol></li>
+        <li><a href="https://facebook.github.io/jest/">Jest</a> is a popular TDD framework that work on Node</li>
+        <li></li>
+    </ol>
+</body>
+</html>
