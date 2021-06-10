@@ -26,6 +26,10 @@ const contents = [
     {
         label: "Week 7 - Further Functions & AJAX",
         url: "week7/"
+    },
+    {
+        label: "Week 8 - Transforms, Transitions, & Drawing",
+        url: "week8/"
     }
 ]
 

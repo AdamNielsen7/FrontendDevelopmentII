@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Week 8 Notes</h1>
+    <ul>
+        <li>Transform Functions <ul>
+            <li>translate moves element relative to its current position <pre>
+                transform: translate(45px, -45px);
+            </pre></li>
+            <li>Scale scales element horizontally then vertically (add multiple transforms) <pre>
+                transform: translateX(40px) scale(1.5);
+            </pre></li>
+            <li>rotate(deg)</li>
+            <li>skew(x,y)</li>
+            <li>transform-origin: 0 0; lets you set the origin of the transformation<img src="https://d1rxzn6szs9jwr.cloudfront.net/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/000058.png"></li>
+        </ul></li>
+        <li>Transition Functions <ul>
+            <li>These are the same<pre>
+                .ad-ad2 h1 span {
+                    transition-property: transform; 
+                    transition-duration: 0.2s;  
+                    transition-timing-function: ease-out;
+                    transition-delay: 50ms;
+                }
+                .ad-ad2 h1 span {
+                    transition: transform 0.2s ease-out 50ms;
+                }
+            </pre></li>
+        </ul></li>
+        <li>Animations <ul>
+            <li>animations use keyframes <pre>
+                @keyframes appearDisappear { 
+                    0%, 100% {
+                    opacity: 0;
+                    }
+                    20%, 80% {
+                    opacity: 1;
+                    }
+                }
+            </pre></li>
+            <li>verbose and concise <pre>
+                .verbose {
+                    animation-name: appearDisappear; 
+                    animation-duration: 300ms; 
+                    animation-timing-function: ease-in;
+                    animation-iteration-count: 1;
+                    animation-direction: alternate;
+                    animation-delay: 5s;
+                    animation-fill-mode: backwards;
+                    animation-play-state: running;
+                }
+                /* shorthand */
+                .concise {
+                    animation: 300ms ease-in alternate 5s backwards appearDisappear;
+                }
+            </pre></li>
+        </ul></li>
+        <li>Canvas <ul>
+            <li>necessary HTML <pre>
+                <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+                    Sorry! Your browser doesn’t support Canvas.
+                </canvas>
+            </pre></li>
+            <li>in JS get your canvas to start drawing on<pre>
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+            </pre></li>
+            <li>"draw" a square with a blue fill <pre>
+                var canvas = document.getElementById("myCanvas"); 
+                var context = canvas.getContext("2d"); 
+                context.strokeStyle = "red";
+                context.fillStyle = "rgba(0, 0, 255, 0.5)";
+                context.fillRect(10, 10, 100, 100);   
+                context.strokeRect(10, 10, 100, 100);
+            </pre></li>
+            <li>canvas coordinate system <img src="https://d1rxzn6szs9jwr.cloudfront.net/premium/reeedr/books/html5-css3-for-the-real-world-2nd-edition/images/000002.png"></li>
+            <li>write a function to draw a circle from an arc <pre>
+                function drawCircle(canvas) {
+                    var canvas = document.getElementById("myCanvas");
+                    var context = canvas.getContext("2d");
+                    context.beginPath();
+                    context.arc(50, 50, 30, 0, Math.PI*2, true);
+                }
+            </pre></li>
+        </ul></li>
+        <li>(SVG) Scalable Vector Graphics<pre>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+                <desc>Drawing a rectangle</desc>
+                    <rect x="10" y="10" width="100" height="100"  
+                        fill="blue" stroke="red" stroke-width="3"  />  
+                
+            </svg>
+        </pre></li>
+        <a href="http://inkscape.org/">use inkscape to make svg images</a>
+        <a href="http://openclipart.org/">use openclipart to find public images</a>
+        <a href="http://raphaeljs.com/"> use raphael library to draw and animate SVG</a>
+    </ul>
+</body>
