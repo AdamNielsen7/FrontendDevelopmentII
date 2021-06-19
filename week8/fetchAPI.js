@@ -24,12 +24,12 @@ function displayShips(url = "https://swapi.dev/api/starships/") {
         createShipList(ships);
         if (data.next) {
             next.onclick = () => {
-                displayShips(data.next);
+                displayShips(data.next.replace(/^http:/, 'https:'));
             };
         }
         if (data.previous) {
             prev.onclick = () => {
-                displayShips(data.previous);
+                displayShips(data.previous.replace(/^http:/, 'https:'));
             };
         }
     });
