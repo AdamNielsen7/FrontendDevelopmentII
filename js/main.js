@@ -30,6 +30,10 @@ const contents = [
     {
         label: "Week 8 - Transforms, Transitions, & Drawing",
         url: "week8/"
+    },
+    {
+        label: "Week 9 - Window, HTML 5, Node, and Project Workflow",
+        url: "week9/"
     }
 ]
 
