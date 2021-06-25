@@ -34,6 +34,14 @@ const contents = [
     {
         label: "Week 9 - Window, HTML 5, Node, and Project Workflow",
         url: "week9/"
+    },
+    {
+        label: "Week 10 - Form Validation & Fetch",
+        url: "week10/"
+    },
+    {
+        label: "Final Project (WiP)",
+        url: "https://adamnielsen.dev/webpage/public/"
     }
 ]
 

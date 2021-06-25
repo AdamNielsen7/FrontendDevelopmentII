@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Week 10 Notes</h1>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Form Validation</a> <ul>
+            <li>required input attribute</li>
+            <li>minlength="6" or maxlength="6" input attribute</li>
+            <li>css to specify invalid input <code>input:invalid:required{}</code></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation">Constraint Validation API</a></li>
+            <li><code>const email = document.getElementById("mail");
+
+                email.addEventListener("input", function (event) {
+                  if (email.validity.typeMismatch) {
+                    email.setCustomValidity("I am expecting an e-mail address!");
+                  } else {
+                    email.setCustomValidity("");
+                  }
+                });</code></li>
+        </ul></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a><ul>
+            <li>basic fetch request <code>fetch('http://example.com/movies.json')
+                .then(response => response.json())
+                .then(data => console.log(data));</code></li>
+        </ul></li>
+    </ul>
+</body>
