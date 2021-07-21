@@ -41,7 +41,11 @@ const contents = [
     },
     {
         label: "Final Project (WiP)",
-        url: "https://adamnielsen.dev/webpage/public/"
+        url: "https://adamnielsen.dev"
+    },
+    {
+        label: "Senior Project: Chatbot",
+        url: "https://chatbot-adamnielsen.herokuapp.com/"
     }
 ]
 
